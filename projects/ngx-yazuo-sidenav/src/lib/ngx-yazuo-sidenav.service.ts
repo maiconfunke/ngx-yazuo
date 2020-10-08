@@ -8,6 +8,8 @@ import {
 import { DOCUMENT } from '@angular/common';
 import { Inject } from '@angular/core';
 import { NgxYazuoSidenavComponent } from './ngx-yazuo-sidenav.component';
+import { YazuoSidenavSettings } from './model/yazuo-sidenav.interface';
+import { YazuoSidenavDirection } from './enums/yazuo-sidenav-direction.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -15,20 +17,28 @@ import { NgxYazuoSidenavComponent } from './ngx-yazuo-sidenav.component';
 export class NgxYazuoSidenavService {
 
   componentRef;
+  defaultSettings: YazuoSidenavSettings = {
+    bgColor:'#eeeeee',
+    width: 75,
+    animationTime: 0.5,
+    position: YazuoSidenavDirection.Left,
+    bgBackDrop: 'rgba(0,0,0,0.4)',
+    backdrop: false
+  };
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
     private appRef: ApplicationRef,
     private injector: Injector,
-    @Inject(DOCUMENT) private document: Document
-  ) {}
-
-  init() {
+    @Inject(DOCUMENT) private document: any
+  ) {
     this.componentRef = this._getElementRef();
     this._appendToContainer(this.componentRef);
   }
-  open(content) {
-    this.componentRef.instance.openNav(content);
+
+  open(content: TemplateRef<any>, settings?: YazuoSidenavSettings) {
+    this.defaultSettings = settings ? {...this.defaultSettings, ...settings} : this.defaultSettings;
+    this.componentRef.instance.openNav(content, this.defaultSettings);
   }
 
   close() {
@@ -45,10 +55,8 @@ export class NgxYazuoSidenavService {
 
   private _appendToContainer(componentRef) {
     this.appRef.attachView(componentRef.hostView);
-
-    const dropdown = (componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
-
-    this.document.getElementsByTagName('body')[0].appendChild(dropdown);
+    const yazuoSidenav = (componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
+    this.document.body.appendChild(yazuoSidenav);
   }
 
 }

@@ -1,24 +1,80 @@
-# NgxYazuoSidenav
+## NgxYazuoSidenav
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.14.
+## Installation
 
-## Code scaffolding
+`nnpm install --save ngx-yazuo-sidenav`
 
-Run `ng generate component component-name --project ngx-yazuo-sidenav` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-yazuo-sidenav`.
-> Note: Don't forget to add `--project ngx-yazuo-sidenav` or else it will be added to the default project in your `angular.json` file. 
+## Usage
 
-## Build
+### Module:
 
-Run `ng build ngx-yazuo-sidenav` to build the project. The build artifacts will be stored in the `dist/` directory.
+Import `gxYazuoSidenavModule` from `ngx-yazuo-sidenav`
 
-## Publishing
+```javascript
+import { NgxYazuoSidenavModule } from 'ngx-yazuo-sidenav';
 
-After building your library with `ng build ngx-yazuo-sidenav`, go to the dist folder `cd dist/ngx-yazuo-sidenav` and run `npm publish`.
+@NgModule({
+  imports: [ NgxYazuoSidenavModule.forRoot() ]
+})
+```
 
-## Running unit tests
+### Component
 
-Run `ng test ngx-yazuo-sidenav` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Markup
 
-## Further help
+```html
+<button (click)="showSideNav()">Show Sidenav</button>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<ng-template #content>
+   <h1>HELLO WORD!</h1>
+</ng-template>
+```
+
+2. Component method
+
+```javascript
+import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { YazuoSidenavSetting, NgxYazuoSidenavService, YazuoSidenavDirection } from 'ngx-yazuo-sidenav';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  title = 'app';
+
+  @ViewChild('content', {static: true}) content: TemplateRef<any>;
+
+  constructor(private yazuoSidenav: NgxYazuoSidenavService) {}
+
+  settings: YazuoSidenavSettings = {
+    bgColor:'#eeeeee', //default: '#eeeeee'
+    width: 100, //default: 75
+    animationTime: 1, //default: 0.5s
+    position: YazuoSidenavDirection.Right, //default: YazuoSidenavDirection.Left
+    bgBackDrop: 'rgba(0,0,0,0.2)', //default: rgba(0,0,0,0.2)
+    backdrop: true //default: false
+  };
+
+  showSideNav(): void {
+    this.yazuoSidenav.open(this.content, settings); //settings is optional
+  }
+
+  closeSideNav(): void {
+    this.yazuoSidenav.close()
+  }
+}
+```
+
+## YazuoSidenav options
+```javascript
+export interface YazuoSidenavSettings {
+  bgColor?: string; //color background sidenav
+  animationTime?: number; //duration for animation on close
+  width?: number; //width of sidenav component
+  position?: YazuoSidenavDirection; //position start sidenav: left ou right
+  backdrop?: boolean; //show backdrop
+  bgBackDrop?: string; //color for backdrop
+}
+```

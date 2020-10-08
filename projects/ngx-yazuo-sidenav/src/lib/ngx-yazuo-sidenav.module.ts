@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { YazuoSidenavSettings } from './model/yazuo-sidenav.interface';
 import { NgxYazuoSidenavComponent } from './ngx-yazuo-sidenav.component';
 
 
@@ -14,10 +13,10 @@ import { NgxYazuoSidenavComponent } from './ngx-yazuo-sidenav.component';
 })
 
 export class NgxYazuoSidenavModule {
-  static forRoot(settings?: YazuoSidenavSettings): ModuleWithProviders<NgxYazuoSidenavModule> {
+  static forRoot(): ModuleWithProviders<NgxYazuoSidenavModule> {
     return {
       ngModule: NgxYazuoSidenavModule,
-      providers: [NgxYazuoSidenavModule, { provide: 'settings', useValue: settings }]
+      providers: [NgxYazuoSidenavModule]
     };
   }
 }

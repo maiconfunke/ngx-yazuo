@@ -1,5 +1,5 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { NgxYazuoSidenavService } from '../../../ngx-yazuo-sidenav/src/lib/ngx-yazuo-sidenav.service';
+import { YazuoSidenavDirection, NgxYazuoSidenavService  } from 'ngx-yazuo-sidenav';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +11,13 @@ export class AppComponent {
 
   @ViewChild('content', {static: true}) content: TemplateRef<any>;
 
-  constructor(private service: NgxYazuoSidenavService) {
-    this.service.init();
-  }
+  constructor(private service: NgxYazuoSidenavService) {}
   showSideNav() {
-    this.service.open(this.content);
-    setTimeout(()=>{ this.service.close()}, 2000)
+    this.service.open(this.content, {
+      bgColor: '#eeeeee',
+      position: YazuoSidenavDirection.Right
+    });
+    // setTimeout(()=>{ this.service.close()}, 2000)
   }
 
 }
