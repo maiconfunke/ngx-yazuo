@@ -2,7 +2,7 @@
 
 ## Installation
 
-`nnpm install --save ngx-yazuo-sidenav`
+`npm install --save ngx-yazuo-sidenav`
 
 ## Usage
 

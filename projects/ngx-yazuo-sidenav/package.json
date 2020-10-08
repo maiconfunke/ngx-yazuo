@@ -1,6 +1,6 @@
 {
   "name": "ngx-yazuo-sidenav",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple sidenav with dinamic content",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maiconfunke/ngx-yazuo/tree/master/projects/ngx-yazuo-sidenav"
+    "url": "https://github.com/maiconfunke/ngx-yazuo/tree/master/projects/ngx-yazuo-sidenav"
   },
   "keywords": [
     "side dialog",
