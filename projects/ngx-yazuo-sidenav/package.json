@@ -1,11 +1,29 @@
 {
   "name": "ngx-yazuo-sidenav",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
     "@angular/core": "^10.0.14"
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maiconfunke/ngx-yazuo/tree/master/projects/ngx-yazuo-sidenav"
+  },
+  "keywords": [
+    "angularjs",
+    "sidedialog",
+    "sidenav",
+    "angular",
+    "components",
+    "side content"
+  ],
+  "author": "Maicon Funke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maiconfunke/ngx-yazuo/issues"
+  },
+  "homepage": "https://github.com/maiconfunke/ngx-yazuo/tree/master/projects/ngx-yazuo-sidenav#readme"
 }
