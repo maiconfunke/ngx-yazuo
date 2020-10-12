@@ -1,6 +1,6 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { YazuoSidenavDirection} from 'projects/ngx-yazuo-sidenav/src/lib/enums/yazuo-sidenav-direction.enum';
-import { NgxYazuoSidenavService } from 'projects/ngx-yazuo-sidenav/src/lib/ngx-yazuo-sidenav.service';
+import { YazuoSidenavDirection} from 'ngx-yazuo-sidenav';
+import { NgxYazuoSidenavService } from 'ngx-yazuo-sidenav';
 
 @Component({
   selector: 'app-root',
