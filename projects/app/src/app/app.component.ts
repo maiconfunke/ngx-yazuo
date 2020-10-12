@@ -16,7 +16,8 @@ export class AppComponent {
   showSideNav() {
     this.service.open(this.content, {
       bgColor: '#eeeeee',
-      position: YazuoSidenavDirection.Right
+      bgBackDrop: 'black',
+      position: YazuoSidenavDirection.Right,
     });
     // setTimeout(()=>{ this.service.close()}, 2000)
   }

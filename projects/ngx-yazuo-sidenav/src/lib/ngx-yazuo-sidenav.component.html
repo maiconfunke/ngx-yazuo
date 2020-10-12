@@ -15,3 +15,9 @@
       <ng-container *ngTemplateOutlet="content; context: {}"></ng-container>
     </div>
 </div>
+<div class="backdrop"
+  [class.from-right]="isDirectionFromRight"
+  [class.from-left]="isDirectionFromLeft"
+  [style.background-color]="settings.bgBackDrop"
+  *ngIf="isShow && settings.backdrop">
+</div>

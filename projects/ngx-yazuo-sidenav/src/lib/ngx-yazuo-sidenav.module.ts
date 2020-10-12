@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { NgxYazuoSidenavComponent } from './ngx-yazuo-sidenav.component';
-import { NgxYazuoClickOutsideModule } from '../../../ngx-yazuo-click-outside/src/lib/ngx-yazuo-click-outside.module';
+import { NgxYazuoClickOutsideModule } from 'ngx-yazuo-click-outside';
 
 
 

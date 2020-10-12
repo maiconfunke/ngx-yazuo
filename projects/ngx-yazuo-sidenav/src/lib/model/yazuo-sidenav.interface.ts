@@ -7,4 +7,5 @@ export interface YazuoSidenavSettings {
   position?: YazuoSidenavDirection;
   backdrop?: boolean;
   bgBackDrop?: string;
+  clickOutside?: boolean;
 }

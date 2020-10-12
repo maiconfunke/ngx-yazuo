@@ -54,7 +54,8 @@ export class AppComponent {
     animationTime: 1, //default: 0.5s
     position: YazuoSidenavDirection.Right, //default: YazuoSidenavDirection.Left
     bgBackDrop: 'rgba(0,0,0,0.2)', //default: rgba(0,0,0,0.2)
-    backdrop: true //default: false
+    backdrop: false //default: true,
+    clickOutside: false //default: true
   };
 
   showSideNav(): void {
@@ -76,5 +77,6 @@ export interface YazuoSidenavSettings {
   position?: YazuoSidenavDirection; //position start sidenav: left ou right
   backdrop?: boolean; //show backdrop
   bgBackDrop?: string; //color for backdrop
+  clickOutside?: boolean; //close the sidenav when clicked outside
 }
 ```

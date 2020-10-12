@@ -16,6 +16,7 @@ export class NgxYazuoSidenavComponent implements OnInit {
   content: TemplateRef<any>;
   settings: YazuoSidenavSettings = {};
   isShow = false;
+  onLoaded = false;
 
   ngOnInit(): void {}
 
@@ -23,16 +24,14 @@ export class NgxYazuoSidenavComponent implements OnInit {
     this.settings = settings;
     this.content = content;
     this.isShow = true;
-    if(this.settings.backdrop) {
-      this.document.body.style.backgroundColor = this.settings.bgBackDrop;
-    }
+    setTimeout(() => {
+      this.onLoaded = true
+    }, this.settings.animationTime * 1000);
   }
 
   closeNav() {
     this.isShow = false;
-    if(this.settings.backdrop) {
-      this.document.body.style.backgroundColor = 'white';
-    }
+    this.onLoaded = false;
   }
 
   get isDirectionFromRight() {
@@ -49,6 +48,8 @@ export class NgxYazuoSidenavComponent implements OnInit {
   }
 
   onClickOutside(): void {
-      console.log('oi')
+    if(this.onLoaded && this.settings.clickOutside) {
+      this.closeNav();
+    }
   }
 }

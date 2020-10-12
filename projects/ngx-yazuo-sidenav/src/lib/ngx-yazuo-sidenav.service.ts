@@ -18,12 +18,13 @@ export class NgxYazuoSidenavService {
 
   componentRef;
   defaultSettings: YazuoSidenavSettings = {
-    bgColor:'#eeeeee',
+    bgColor:'#eee',
     width: 75,
     animationTime: 0.5,
     position: YazuoSidenavDirection.Left,
-    bgBackDrop: 'rgba(0,0,0,0.4)',
-    backdrop: false
+    bgBackDrop: '#000',
+    backdrop: true,
+    clickOutside: true
   };
 
   constructor(
