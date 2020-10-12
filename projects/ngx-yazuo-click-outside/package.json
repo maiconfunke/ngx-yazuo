@@ -1,11 +1,29 @@
 {
   "name": "ngx-yazuo-click-outside",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "A simple directive for get clicks outside from elements",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
     "@angular/core": "^10.0.14"
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maiconfunke/ngx-yazuo/tree/master/projects/ngx-yazuo-click-outside"
+  },
+  "keywords": [
+    "click outside",
+    "clickoutside",
+    "angular",
+    "components",
+    "directives"
+  ],
+  "author": "Maicon Funke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maiconfunke/ngx-yazuo/issues"
+  },
+  "homepage": "https://github.com/maiconfunke/ngx-yazuo/tree/master/projects/ngx-yazuo-click-outside#readme"
 }

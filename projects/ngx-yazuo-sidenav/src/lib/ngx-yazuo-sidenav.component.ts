@@ -47,4 +47,8 @@ export class NgxYazuoSidenavComponent implements OnInit {
     const cWidth = this.isShow ? this.settings.width + '%' : 0;
     return cWidth;
   }
+
+  onClickOutside(): void {
+      console.log('oi')
+  }
 }

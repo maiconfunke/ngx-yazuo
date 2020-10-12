@@ -4,6 +4,7 @@
   [style.background-color]="settings.bgColor"
   [style.width]="componentWidth"
   [style.transition-duration]="settings.animationTime + 's'"
+  (ngx-yazuo-click-outside)="onClickOutside()"
   >
     <div class="btn-close" [class.from-left]="isDirectionFromLeft" (click)="closeNav()">
       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

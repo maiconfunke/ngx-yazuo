@@ -1,10 +1,17 @@
 # NgxYazuoClickOutside
 
-## How to use it
-Import **NgxYazuoClickOutside** in the root module of your app.
+## Installation
+
+`npm install --save ngx-yazuo-click-outside`
+
+## Usage
+
+### Module:
+
+Import `NgxYazuoClickOutside` from `ngx-yazuo-click-outside`
 
 ```ts
-import { NgxYazuoClickOutsideModule } from '@fluig-tools-lib/ngx-styleguide';
+import { NgxYazuoClickOutsideModule } from 'ngx-yazuo-click-outside';
 
 @NgModule({
   // ...
@@ -15,6 +22,7 @@ import { NgxYazuoClickOutsideModule } from '@fluig-tools-lib/ngx-styleguide';
 })
 export class MyAppModule {}
 ```
+### Markup
 
 Use the **NgxYazuoClickOutsideDirective** passing the parameters **allowedClickedClasses** and **allowedClickedIds** for classes and id's to allow clicking, respectively.
 
@@ -23,6 +31,9 @@ Use the **NgxYazuoClickOutsideDirective** passing the parameters **allowedClicke
     <div class="content" (ngx-yazuo-click-outside)="outsideClicked()" [allowed-clicked-classes]="classesList" [allowed-clicked-ids]="idsList">
     </div>
 ```
+
+
+### Component
 
 ```ts
 
