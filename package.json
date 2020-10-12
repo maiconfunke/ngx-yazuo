@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:lib-ngx-yazuo-sidenav": "ng build ngx-yazuo-sidenav --prod"
+    "build:lib-ngx-yazuo-sidenav": "ng build ngx-yazuo-sidenav --prod",
+    "build:lib-ngx-yazuo-click-outside": "ng build ngx-yazuo-click-outside --prod"
   },
   "private": true,
   "dependencies": {

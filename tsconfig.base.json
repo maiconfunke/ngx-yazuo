@@ -19,6 +19,10 @@
       "ngx-yazuo-sidenav": [
         "dist/ngx-yazuo-sidenav/ngx-yazuo-sidenav",
         "dist/ngx-yazuo-sidenav"
+      ],
+      "ngx-yazuo-click-outside": [
+        "dist/ngx-yazuo-click-outside/ngx-yazuo-click-outside",
+        "dist/ngx-yazuo-click-outside"
       ]
     }
   }

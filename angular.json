@@ -163,6 +163,46 @@
           }
         }
       }
+    },
+    "ngx-yazuo-click-outside": {
+      "projectType": "library",
+      "root": "projects/ngx-yazuo-click-outside",
+      "sourceRoot": "projects/ngx-yazuo-click-outside/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-yazuo-click-outside/tsconfig.lib.json",
+            "project": "projects/ngx-yazuo-click-outside/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-yazuo-click-outside/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-yazuo-click-outside/src/test.ts",
+            "tsConfig": "projects/ngx-yazuo-click-outside/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-yazuo-click-outside/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-yazuo-click-outside/tsconfig.lib.json",
+              "projects/ngx-yazuo-click-outside/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ngx-yazuo-sidenav"
 }
