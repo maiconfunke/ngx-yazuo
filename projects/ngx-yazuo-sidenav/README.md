@@ -34,7 +34,7 @@ import { NgxYazuoSidenavModule } from 'ngx-yazuo-sidenav';
 
 ```javascript
 import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { YazuoSidenavSetting, NgxYazuoSidenavService, YazuoSidenavDirection } from 'ngx-yazuo-sidenav';
+import { YazuoSidenavSettings, NgxYazuoSidenavService, YazuoSidenavDirection } from 'ngx-yazuo-sidenav';
 
 @Component({
   selector: 'app-root',
@@ -54,12 +54,12 @@ export class AppComponent {
     animationTime: 1, //default: 0.5s
     position: YazuoSidenavDirection.Right, //default: YazuoSidenavDirection.Left
     bgBackDrop: 'rgba(0,0,0,0.2)', //default: rgba(0,0,0,0.2)
-    backdrop: false //default: true,
+    backdrop: false, //default: true,
     clickOutside: false //default: true
   };
 
   showSideNav(): void {
-    this.yazuoSidenav.open(this.content, settings); //settings is optional
+    this.yazuoSidenav.open(this.content, this.settings); //settings is optional
   }
 
   closeSideNav(): void {
