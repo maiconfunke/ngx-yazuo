@@ -1,6 +1,6 @@
 {
   "name": "ngx-yazuo-sidenav",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A simple sidenav with dinamic content",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
