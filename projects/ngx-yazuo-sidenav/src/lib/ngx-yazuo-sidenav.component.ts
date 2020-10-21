@@ -30,6 +30,7 @@ export class NgxYazuoSidenavComponent implements OnInit {
   }
 
   closeNav() {
+    this.document.body.style.overflowY = 'auto';
     this.isShow = false;
     this.onLoaded = false;
   }
