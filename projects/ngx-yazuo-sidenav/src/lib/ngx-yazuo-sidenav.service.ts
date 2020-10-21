@@ -38,11 +38,13 @@ export class NgxYazuoSidenavService {
   }
 
   open(content: TemplateRef<any>, settings?: YazuoSidenavSettings) {
+    this.document.body.style.overflowY = 'hidden';
     this.defaultSettings = settings ? {...this.defaultSettings, ...settings} : this.defaultSettings;
     this.componentRef.instance.openNav(content, this.defaultSettings);
   }
 
   close() {
+    this.document.body.style.overflowY = 'auto';
     this.componentRef.instance.closeNav();
   }
 
