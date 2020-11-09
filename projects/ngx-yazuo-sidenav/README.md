@@ -56,6 +56,7 @@ export class AppComponent {
     bgBackDrop: 'rgba(0,0,0,0.2)', //default: rgba(0,0,0,0.2)
     backdrop: false, //default: true,
     clickOutside: false //default: true
+    btnClose: false //default: true
   };
 
   showSideNav(): void {
@@ -78,5 +79,6 @@ export interface YazuoSidenavSettings {
   backdrop?: boolean; //show backdrop
   bgBackDrop?: string; //color for backdrop
   clickOutside?: boolean; //close the sidenav when clicked outside
+  btnClose?: boolean; //flag for hidden or show close button
 }
 ```

@@ -8,4 +8,5 @@ export interface YazuoSidenavSettings {
   backdrop?: boolean;
   bgBackDrop?: string;
   clickOutside?: boolean;
+  btnClose?: boolean;
 }

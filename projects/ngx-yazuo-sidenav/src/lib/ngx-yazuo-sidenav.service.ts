@@ -24,7 +24,8 @@ export class NgxYazuoSidenavService {
     position: YazuoSidenavDirection.Left,
     bgBackDrop: '#000',
     backdrop: true,
-    clickOutside: true
+    clickOutside: true,
+    btnClose: true
   };
 
   constructor(
